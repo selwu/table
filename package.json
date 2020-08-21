@@ -1,0 +1,30 @@
+{
+  "name": "table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selwu/table.git"
+  },
+  "private": true,
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "Alexander Dolgikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selwu/table/issues"
+  },
+  "homepage": "https://github.com/selwu/table#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
