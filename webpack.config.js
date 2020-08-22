@@ -5,6 +5,15 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
+const loaders = () => {
+  const loadersArr = [
+    'babel-loader',
+  ];
+  if (isDev) {
+    loadersArr.push('eslint-loader');
+  }
+  return loadersArr;
+};
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -49,7 +58,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', isDev ? 'eslint-loader' : false],
+        use: loaders(),
       },
     ],
   },
